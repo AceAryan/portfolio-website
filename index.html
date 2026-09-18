@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aryan Kumar — undergraduate student at IIT Gandhinagar interested in robotics, AI, and embedded systems.">
+<title>Aryan Kumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #fafaf8;
+    --text: #1a1a18;
+    --muted: #6b6b67;
+    --subtle: #e8e8e4;
+    --accent: #2563eb;
+    --accent-muted: #dbeafe;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-serif: 'Newsreader', Georgia, serif;
+    --max: 660px;
+  }
+
+  html {
+    background: #f0f2f7;
+    color: var(--text);
+    font-family: var(--font-sans);
+  }
+
+  /* Ambient background blobs */
+  body {
+    min-height: 100vh;
+    padding: 0 1.5rem;
+    position: relative;
+  }
+
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #c7d9f7 0%, #dce8fa 60%, transparent 100%);
+    top: -120px;
+    right: -100px;
+  }
+
+  body::after {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #d4e9f5 0%, #e2eefb 60%, transparent 100%);
+    bottom: 10%;
+    left: -120px;
+  }
+
+  /* Frosted glass content wrapper */
+  nav, main, footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  main {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    padding: 3rem 2.5rem 4rem;
+  }
+
+  nav {
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    padding: 1rem 2rem;
+    max-width: none;
+    border-radius: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 0 -1.5rem;
+  }
+
+  nav > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
+
+  /* Override nav to be flex row not block */
+  nav {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 2rem 0 0;
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-name {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    margin-right: auto;
+  }
+  .nav-name:hover { text-decoration: none; }
+
+  .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .nav-links a {
+    font-size: 0.875rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+  /* MAIN LAYOUT */
+  main {
+    max-width: var(--max);
+    margin: 2rem auto 3rem;
+  }
+
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 3rem;
+  }
+
+  .hero-text h1 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-sub {
+    font-size: 0.9375rem;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .hero-bio {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--text);
+    max-width: 52ch;
+  }
+
+  .hero-bio p + p { margin-top: 0.85rem; }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--muted);
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* SOCIAL LINKS */
+  .social {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .social a {
+    font-size: 0.875rem;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--subtle);
+    padding-bottom: 1px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .social a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+  /* DIVIDER */
+  hr {
+    border: none;
+    border-top: 1px solid var(--subtle);
+    margin: 2.5rem 0;
+  }
+
+  /* SECTIONS */
+  section { margin-bottom: 3rem; }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .skill-group h3 {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+  }
+
+  .skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .skill-list li {
+    font-size: 0.8125rem;
+    background: var(--subtle);
+    color: var(--text);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+  }
+
+  /* PROJECTS */
+  .project-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .project {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .project-title {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+
+  .project-desc {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 46ch;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    background: var(--accent-muted);
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .project-links a {
+    font-size: 0.8125rem;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .project-links a:hover { color: var(--accent); text-decoration: none; }
+
+  /* EDUCATION */
+  .edu-item { margin-bottom: 1rem; }
+  .edu-name {
+    font-weight: 500;
+    font-size: 0.9375rem;
+  }
+  .edu-detail {
+    font-size: 0.875rem;
+    color: var(--muted);
+    margin-top: 0.15rem;
+  }
+
+  /* CONTACT */
+  .contact-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .contact-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .contact-item a {
+    font-size: 0.9375rem;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--subtle);
+  }
+  .contact-item a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+  /* FOOTER */
+  footer {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 1.5rem 0 3rem;
+    font-size: 0.8125rem;
+    color: var(--muted);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* MOBILE */
+  @media (max-width: 520px) {
+    .hero { grid-template-columns: 1fr; }
+    .avatar { width: 72px; height: 72px; font-size: 1.5rem; grid-row: 1; justify-self: start; }
+    .hero-text { grid-row: 2; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .project { grid-template-columns: 1fr; }
+    .project-links { text-align: left; flex-direction: row; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    main { animation: fadein 0.4s ease both; }
+    @keyframes fadein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div style="max-width:var(--max);margin:0 auto;width:100%;display:flex;align-items:baseline;gap:2rem;flex-wrap:wrap;">
+    <a href="#" class="nav-name">Aryan Kumar</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/aryan-kumar" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Aryan Kumar</h1>
+      <p class="hero-sub">B.Tech student · IIT Gandhinagar · Robotics &amp; AI</p>
+      <div class="hero-bio">
+        <p>I'm an undergraduate at <a href="https://iitgn.ac.in" target="_blank" rel="noopener">IIT Gandhinagar</a>, interested in robotics, embedded systems, and AI. I enjoy building systems that bridge software and the physical world.</p>
+        <p>Currently exploring ROS2, autonomous systems, and machine learning — always looking for interesting problems at the intersection of hardware and intelligence.</p>
+      </div>
+      <div class="social">
+        <a href="mailto:aryan@iitgn.ac.in">Email</a>
+        <a href="https://github.com/aryan-kumar" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/aryan-kumar" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </div>
+    <div class="avatar">AK</div>
+  </div>
+
+  <hr>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">Skills</p>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Programming</h3>
+        <ul class="skill-list">
+          <li>Python</li>
+          <li>C / C++</li>
+          <li>Git</li>
+          <li>NumPy</li>
+          <li>Pandas</li>
+          <li>Matplotlib</li>
+          <li>PyTorch</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Hardware &amp; Tools</h3>
+        <ul class="skill-list">
+          <li>ROS2</li>
+          <li>Arduino</li>
+          <li>Linux</li>
+          <li>Vivado</li>
+          <li>Embedded Systems</li>
+          <li>Autodesk Inventor</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- EDUCATION -->
+  <section>
+    <p class="section-label">Education</p>
+    <div class="edu-item">
+      <p class="edu-name">IIT Gandhinagar</p>
+      <p class="edu-detail">B.Tech · Computer Science &amp; Engineering · 2022–2026</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="section-label">Projects</p>
+    <div class="project-list">
+
+      <div class="project">
+        <div>
+          <p class="project-title">ROS2 Turtle Simulation</p>
+          <p class="project-desc">A simulation of multi-agent turtle control using ROS2. Demonstrates publisher–subscriber architecture, custom messages, and coordinated motion planning in a 2D environment.</p>
+          <div class="project-tags">
+            <span class="tag">ROS2</span>
+            <span class="tag">Python</span>
+            <span class="tag">Robotics</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/aryan-kumar" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div>
+          <p class="project-title">Add your next project here</p>
+          <p class="project-desc">Describe what you built, the problem it solved, and the interesting technical decisions you made.</p>
+          <div class="project-tags">
+            <span class="tag">Tag</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="#">Link ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Contact</p>
+    <div class="contact-row">
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:aryan@iitgn.ac.in">aryan@iitgn.ac.in</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/aryan-kumar" target="_blank" rel="noopener">github.com/aryan-kumar</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://linkedin.com/in/aryan-kumar" target="_blank" rel="noopener">linkedin.com/in/aryan-kumar</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Aryan Kumar · IIT Gandhinagar
+</footer>
+
+</body>
+</html>
