@@ -625,6 +625,14 @@ h1 {
     align-items: center;
     gap: 10px;
     margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.project-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 2px;
 }
 
 .project-info h3 {
@@ -656,6 +664,27 @@ h1 {
     display: block;
 }
 
+.project-demo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.26rem 0.6rem;
+    border: 1px solid rgba(123, 200, 255, 0.35);
+    border-radius: 8px;
+    background: rgba(123, 200, 255, 0.10);
+    color: #dff4ff;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.project-demo:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
 .project-info p {
     margin: 0;
     color: var(--muted);
@@ -681,6 +710,14 @@ h1 {
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.03em;
+}
+
+.project-status {
+    background: linear-gradient(135deg, #dfeeff 0%, #cfe7ff 100%);
+    border-color: rgba(98, 164, 255, 0.55);
+    color: #102e4a;
+    font-weight: 800;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35), 0 0 0 1px rgba(98, 164, 255, 0.12);
 }
 
 .pub-meta {
