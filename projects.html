@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Aryan Kumar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260919" />
+</head>
+
+<body data-theme="dark">
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="header-inner">
+                <a href="index.html" class="brand">Aryan Kumar</a>
+                <nav class="nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html" class="active">Projects</a>
+                    <!-- Research will be added later when there is something to showcase. -->
+                </nav>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb">
+                            <span class="icon sun" aria-hidden="true">☀</span>
+                            <span class="icon moon" aria-hidden="true">☾</span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-hero" data-reveal>
+                <div>
+                    <div class="eyebrow">Projects</div>
+                    <h1>Things I've built.</h1>
+                    <p class="page-intro">A mix of systems, tools, and experiments — mostly from coursework and things I
+                        wanted to exist. Some are ongoing.</p>
+                    <p class="page-intro">Spans hardware security, CPU design, networking, databases, and ML.</p>
+                </div>
+            </section>
+
+            <section class="panel" data-reveal>
+                <div class="section-head">
+                    <div class="section-tag">Open source</div>
+                    <h2>Selected systems and builds.</h2>
+                </div>
+
+                <div class="project-list">
+                    <article class="project-list-item">
+                        <div class="project-index">01</div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h3>Conditional Access on FPGA</h3>
+                                <a class="project-github" href="#"
+                                    aria-label="GitHub link for Conditional Access on FPGA">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M12 .5a12 12 0 0 0-3.79 23.38c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.39-1.32-1.76-1.32-1.76-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.29 3.46.99.11-.77.42-1.29.76-1.59-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.36 11.36 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.85 1.23 1.93 1.23 3.25 0 4.63-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p>Extended the open-source CVA6 RISC-V core with hardware-level Conditional Access
+                                primitives — new instructions wired through decode, execute, and writeback. Single-core
+                                is done; currently working on multicore with inter-core CA enforcement and shared-memory
+                                access control. Advised by Prof. Ajay Singh at IITGN.</p>
+                        </div>
+                        <div class="project-meta">
+                            <span>SystemVerilog</span>
+                            <span>RISC-V</span>
+                            <span>FPGA</span>
+                            <span>Ongoing</span>
+                        </div>
+                    </article>
+
+                    <article class="project-list-item">
+                        <div class="project-index">02</div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h3>riscv-viz — Cycle-Accurate RISC-V Simulator</h3>
+                                <a class="project-github" href="#"
+                                    aria-label="GitHub link for riscv-viz — Cycle-Accurate RISC-V Simulator">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M12 .5a12 12 0 0 0-3.79 23.38c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.39-1.32-1.76-1.32-1.76-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.29 3.46.99.11-.77.42-1.29.76-1.59-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.36 11.36 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.85 1.23 1.93 1.23 3.25 0 4.63-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p>RV32I CPU simulator in C++17 with a custom assembly parser — no external assembler,
+                                byte-addressable little-endian memory. FastAPI backend exposes register and memory state
+                                per cycle; React + TypeScript frontend shows live register diffs and a hex dump.
+                                Containerised with Docker, deployed on Render. <a href="#">Live demo →</a></p>
+                        </div>
+                        <div class="project-meta">
+                            <span>C++17</span>
+                            <span>FastAPI</span>
+                            <span>React</span>
+                            <span>Docker</span>
+                            <span>Ongoing</span>
+                        </div>
+                    </article>
+
+                    <article class="project-list-item">
+                        <div class="project-index">03</div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h3>TLS Fingerprinting — Passive Traffic Analyser</h3>
+                                <a class="project-github" href="#"
+                                    aria-label="GitHub link for TLS Fingerprinting — Passive Traffic Analyser">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M12 .5a12 12 0 0 0-3.79 23.38c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.39-1.32-1.76-1.32-1.76-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.29 3.46.99.11-.77.42-1.29.76-1.59-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.36 11.36 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.85 1.23 1.93 1.23 3.25 0 4.63-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p>TLS handshake parser written from scratch in Python — reads raw ClientHello/ServerHello
+                                bytes, implements JA3, JA3S, and JA4 per the Salesforce and FoxIO specs. Handles
+                                fragmented packets via TCP stream reassembly. Identified 5 clients from the handshake
+                                alone, no decryption needed. Also showed that JA3 breaks when Chrome randomises
+                                extension order; JA4 doesn't. Advised by Prof. Sameer G Kulkarni.</p>
+                        </div>
+                        <div class="project-meta">
+                            <span>Python</span>
+                            <span>Scapy</span>
+                            <span>Networking</span>
+                        </div>
+                    </article>
+
+                    <article class="project-list-item">
+                        <div class="project-index">04</div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h3>Unix Shell</h3>
+                                <a class="project-github" href="#" aria-label="GitHub link for Unix Shell">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M12 .5a12 12 0 0 0-3.79 23.38c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.39-1.32-1.76-1.32-1.76-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.29 3.46.99.11-.77.42-1.29.76-1.59-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.36 11.36 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.85 1.23 1.93 1.23 3.25 0 4.63-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p>A Unix shell in C with built-ins (cd, pwd, echo, kill, exit) and arbitrary external
+                                commands. Uses fork/execvp/waitpid for process lifecycle and SIGQUIT for graceful
+                                termination. Built for the OS course with Prof. Balagopal Komarath.</p>
+                        </div>
+                        <div class="project-meta">
+                            <span>C</span>
+                            <span>POSIX</span>
+                            <span>OS</span>
+                        </div>
+                    </article>
+
+                    <article class="project-list-item">
+                        <div class="project-index">05</div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h3>StayEase — Distributed Database Engine</h3>
+                                <a class="project-github" href="#"
+                                    aria-label="GitHub link for StayEase — Distributed Database Engine">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M12 .5a12 12 0 0 0-3.79 23.38c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.39-1.32-1.76-1.32-1.76-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.29 3.46.99.11-.77.42-1.29.76-1.59-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.36 11.36 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.85 1.23 1.93 1.23 3.25 0 4.63-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p>B+ Tree storage engine with a Write-Ahead Log for crash recovery. TransactionManager
+                                handles begin/commit/rollback with REDO/UNDO — tested under 100 concurrent threads, zero
+                                corruption. Data partitioned across 3 MySQL shards with hash-based routing and
+                                scatter-gather for cross-shard queries. Flask REST API with JWT auth and RBAC,
+                                load-tested at 100 concurrent users with 0% failure. Advised by Prof. Yogesh Kumar
+                                Meena.</p>
+                        </div>
+                        <div class="project-meta">
+                            <span>Python</span>
+                            <span>MySQL</span>
+                            <span>Flask</span>
+                            <span>Distributed Systems</span>
+                        </div>
+                    </article>
+
+                    <article class="project-list-item">
+                        <div class="project-index">06</div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h3>DataFlix — Recommender Systems Pipeline</h3>
+                                <a class="project-github" href="#"
+                                    aria-label="GitHub link for DataFlix — Recommender Systems Pipeline">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M12 .5a12 12 0 0 0-3.79 23.38c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.39-1.32-1.76-1.32-1.76-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.29 3.46.99.11-.77.42-1.29.76-1.59-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.36 11.36 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.85 1.23 1.93 1.23 3.25 0 4.63-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <p>Trained and compared 6 models (ALS, BPR, EASER, LightGCN, Two-Tower, Hybrid) on 32M
+                                ratings. EASER came out on top with NDCG@10 of 0.0891 — about 105% better than LightGCN.
+                                Built a Hybrid model combining collaborative filtering with SBERT embeddings for
+                                cold-start users; offloaded LightGCN graph ops to CPU to fit a 60M+ edge graph in 6GB
+                                VRAM. Advised by Prof. Anirban Dasgupta.</p>
+                        </div>
+                        <div class="project-meta">
+                            <span>PyTorch</span>
+                            <span>Python</span>
+                            <span>LightGCN</span>
+                            <span>SBERT</span>
+                            <span>RecSys</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>© 2026 Aryan Kumar · IIT Gandhinagar</footer>
+    </div>
+
+    <script src="script.js?v=20260919"></script>
+</body>
+
+</html>
