@@ -51,8 +51,28 @@
                     <h2>Selected systems and builds.</h2>
                 </div>
 
+                <div class="project-toolbar" aria-label="Project filters">
+                    <div class="project-filter" role="tablist" aria-label="Filter projects by type">
+                        <button class="project-filter-btn is-active" type="button" data-filter="all"
+                            aria-pressed="true">All</button>
+                        <button class="project-filter-btn" type="button" data-filter="systems"
+                            aria-pressed="false">Systems</button>
+                        <button class="project-filter-btn" type="button" data-filter="security"
+                            aria-pressed="false">Security</button>
+                        <button class="project-filter-btn" type="button" data-filter="ml" aria-pressed="false">ML /
+                            Data</button>
+                        <button class="project-filter-btn" type="button" data-filter="web"
+                            aria-pressed="false">Web</button>
+                        <button class="project-filter-btn" type="button" data-filter="graphics"
+                            aria-pressed="false">Graphics</button>
+                        <button class="project-filter-btn" type="button" data-filter="ongoing"
+                            aria-pressed="false">Ongoing</button>
+                    </div>
+                </div>
+
                 <div class="project-list">
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="systems security" data-status="ongoing"
+                        data-featured="true">
                         <div class="project-index">01</div>
                         <div class="project-info">
                             <div class="project-title-row">
@@ -79,7 +99,8 @@
                         </div>
                     </article>
 
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="systems web" data-status="ongoing"
+                        data-featured="true">
                         <div class="project-index">02</div>
                         <div class="project-info">
                             <div class="project-title-row">
@@ -111,7 +132,7 @@
                         </div>
                     </article>
 
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="security networking ml" data-featured="true">
                         <div class="project-index">03</div>
                         <div class="project-info">
                             <div class="project-title-row">
@@ -137,7 +158,7 @@
                         </div>
                     </article>
 
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="systems" data-featured="false">
                         <div class="project-index">04</div>
                         <div class="project-info">
                             <div class="project-title-row">
@@ -161,7 +182,7 @@
                         </div>
                     </article>
 
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="systems database web" data-featured="false">
                         <div class="project-index">05</div>
                         <div class="project-info">
                             <div class="project-title-row">
@@ -189,7 +210,7 @@
                         </div>
                     </article>
 
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="ml data web" data-featured="false">
                         <div class="project-index">06</div>
                         <div class="project-info">
                             <div class="project-title-row">
@@ -217,7 +238,7 @@
                         </div>
                     </article>
 
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="python graphics" data-featured="false">
                         <div class="project-index">07</div>
                         <div class="project-info">
                             <div class="project-title-row">
@@ -244,7 +265,8 @@
                         </div>
                     </article>
 
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="ml rl" data-status="ongoing"
+                        data-featured="false">
                         <div class="project-index">08</div>
                         <div class="project-info">
                             <div class="project-title-row">
@@ -270,7 +292,8 @@
                         </div>
                     </article>
 
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="ml data" data-status="ongoing"
+                        data-featured="false">
                         <div class="project-index">09</div>
                         <div class="project-info">
                             <div class="project-title-row">
@@ -297,7 +320,8 @@
                         </div>
                     </article>
 
-                    <article class="project-list-item">
+                    <article class="project-list-item" data-category="graphics systems" data-status="ongoing"
+                        data-featured="false">
                         <div class="project-index">10</div>
                         <div class="project-info">
                             <div class="project-title-row">
