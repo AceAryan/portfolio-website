@@ -40,7 +40,7 @@ if (revealNodes.length) {
     revealNodes.forEach((node) => observer.observe(node));
 }
 
-const projectItems = document.querySelectorAll('.project-list-item');
+const projectItems = document.querySelectorAll('.project-toolbar ~ .project-list .project-list-item');
 const projectFilterButtons = document.querySelectorAll('[data-filter]');
 const projectToolbar = document.querySelector('.project-toolbar');
 const projectList = document.querySelector('.project-list');

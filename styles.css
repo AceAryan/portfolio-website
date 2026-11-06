@@ -258,10 +258,11 @@ body[data-theme='light'] .theme-toggle .moon {
 
 .social-row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 26px;
     width: fit-content;
+    max-width: 100%;
     align-items: stretch;
 }
 
@@ -282,6 +283,14 @@ body[data-theme='light'] .theme-toggle .moon {
     text-transform: uppercase;
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     white-space: nowrap;
+}
+
+.social-btn svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 0.5rem;
+    fill: currentColor;
+    flex-shrink: 0;
 }
 
 .social-btn:hover {

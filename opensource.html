@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Source | Aryan Kumar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261106" />
+</head>
+
+<body data-theme="dark">
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="header-inner">
+                <a href="index.html" class="brand">Aryan Kumar</a>
+                <nav class="nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="opensource.html" class="active">Open Source</a>
+                    <!-- Research will be added later when there is something to showcase. -->
+                </nav>
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb">
+                            <span class="icon sun" aria-hidden="true">☀</span>
+                            <span class="icon moon" aria-hidden="true">☾</span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-hero" data-reveal>
+                <div>
+                    <div class="eyebrow">Open Source</div>
+                    <h1>Contributions upstream.</h1>
+                    <p class="page-intro">Work I've contributed to projects maintained by other people and
+                        organisations.</p>
+                </div>
+            </section>
+
+            <section class="panel" data-reveal>
+                <div class="section-head">
+                    <div class="section-tag">Contributions</div>
+                    <h2>Upstream work on other people's projects.</h2>
+                </div>
+
+                <div class="project-list">
+                    <article class="project-list-item">
+                        <div class="project-index">01</div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h3>Microsoft PowerToys — Awake tray time shortcuts</h3>
+                                <div class="project-links">
+                                    <a class="project-github" href="https://github.com/microsoft/PowerToys/pull/51870"
+                                        target="_blank" rel="noopener"
+                                        aria-label="Pull request #51870 on microsoft/PowerToys">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path
+                                                d="M12 .5a12 12 0 0 0-3.79 23.38c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.39-1.32-1.76-1.32-1.76-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.29 3.46.99.11-.77.42-1.29.76-1.59-2.67-.31-5.47-1.34-5.47-5.96 0-1.32.47-2.4 1.23-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.32 3.3 1.23a11.36 11.36 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.85 1.23 1.93 1.23 3.25 0 4.63-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
+                                        </svg>
+                                    </a>
+                                    <a class="project-demo" href="https://github.com/microsoft/PowerToys/pull/51870"
+                                        target="_blank" rel="noopener">PR #51870</a>
+                                    <a class="project-demo" href="https://github.com/microsoft/PowerToys/issues/49529"
+                                        target="_blank" rel="noopener">Issue #49529</a>
+                                </div>
+                            </div>
+                            <p>The Awake utility's tray menu only offered keep-awake intervals of up to 2 hours, and
+                                custom durations could only be set by hand-editing <code>settings.json</code>. This PR
+                                adds 4, 8 and 12 hour defaults and a new Settings section where users can add, remove
+                                and reset their own tray time shortcuts.</p>
+                        </div>
+                        <div class="project-meta">
+                            <span>C#</span>
+                            <span>WinUI</span>
+                            <span>Windows</span>
+                            <span class="project-status">In review</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>© 2026 Aryan Kumar · IIT Gandhinagar</footer>
+    </div>
+
+    <script src="script.js?v=20261106"></script>
+</body>
+
+</html>
